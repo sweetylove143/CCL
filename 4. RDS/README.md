@@ -93,7 +93,7 @@ mysql --local-infile=1 -h <endpoint> -u admin -p
 Then in MySQL:
 
 ```
-LOAD DATA LOCAL INFILE 'C:/path/to/employees.csv'
+LOAD DATA LOCAL INFILE 'D:/Me/College/sweetu/CCL/4. RDS/employees.csv'
 INTO TABLE employees
 FIELDS TERMINATED BY ','
 LINES TERMINATED BY '\n'

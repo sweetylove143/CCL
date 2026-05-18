@@ -82,12 +82,37 @@ def lambda_handler(event, context):
 
 ## Step 7: Test with curl or Postman
 
+POST (insert data) using Postman:
+
+1. Method: POST
+2. URL: https://YOUR_API_ID.execute-api.YOUR_REGION.amazonaws.com/user
+3. Headers: Content-Type = application/json
+4. Body -> raw -> JSON:
+
+```
+{
+    "user_id": "101",
+    "name": "John"
+}
+```
+
+5. Click Send and check for status 200.
+
+GET (fetch data) using Postman:
+
+1. Method: GET
+2. URL: https://YOUR_API_ID.execute-api.YOUR_REGION.amazonaws.com/user
+3. Params: user_id = 101
+4. Click Send and check the JSON response.
+
+curl alternatives:
+
 POST (insert data):
 
 ```
 curl -X POST "https://YOUR_API_ID.execute-api.YOUR_REGION.amazonaws.com/user" \
-  -H "Content-Type: application/json" \
-  -d "{\"user_id\":\"101\",\"name\":\"John\"}"
+    -H "Content-Type: application/json" \
+    -d "{\"user_id\":\"101\",\"name\":\"John\"}"
 ```
 
 GET (fetch data):
